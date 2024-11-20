@@ -1,0 +1,39 @@
+body {
+    color: white;
+    background-color: #333;
+    font-size: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 320px;
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+form input {
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+form input[type="number"] {
+    background-color: gray;
+    color: white;
+    text-indent: 5px;
+}
+
+form input[type="submit"] {
+    background-color: blue;
+    color: white;
+}
+
+#results {
+    border: white 1px solid;
+    border-radius: 5px;
+}

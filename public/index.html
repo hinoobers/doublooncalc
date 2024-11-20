@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doubloon Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <form>
+        <!-- How many doubloons do they have currently? How much doubloons do you WANT? Do you have any unsubmitted hours that you can submit as projects RIGHT NOW (if, then how many, if not = 0)? Do you want to predict PPH (Price per hour), or use a static value, if static then give static -->
+
+        <label for="currentDoubloons">How many doubloons do you have currently?</label>
+        <input type="number" id="currentDoubloons" name="currentDoubloons" min="0" required>
+        
+        <label for="desiredDoubloons">How many doubloons do you WANT?</label>
+        <input type="number" id="desiredDoubloons" name="desiredDoubloons" min="1" required>
+
+        <label for="unsubmittedHours">Hours that you can submit Right NOW</label>
+        <input type="number" id="unsubmittedHours" name="unsubmittedHours" value="0" min="0">
+
+        <label for="predictPPH">Do you want to predict PPH (Price/h)?</label>
+        <input type="radio" id="predictPPHYes" name="predictPPH" value="yes" checked required>
+        <label for="predictPPHYes">Yes</label>
+        <input type="radio" id="predictPPHNo" name="predictPPH" value="no" required>
+        <label for="predictPPHNo">No</label>
+
+        <input type="submit" value="Calculate">
+
+        <div id="results" style="display: none;">
+            <p id="simulations">According to {simulation} simulations,</p>
+            <p id="hoursNeeded">You need ~{hoursNeeded} hours to reach your goal.</p>
+            <p id="pph">Average Price/hour within was {avg_pph}</p>
+            
+        </div>
+    </form>
+</body>
+</html>
